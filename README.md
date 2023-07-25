@@ -1,5 +1,5 @@
 # mosaic
-WIP
+![social preview image](https://repository-images.githubusercontent.com/670587732/493c1af0-5cfa-47ec-91aa-ad6ad4f33b79)
 
 ## Generated data
 ### FlatGeobuf - zoom-by-zoom from GSI optbv
@@ -25,3 +25,7 @@ You can read the file from QGIS using the URLs above by adding vector layer, sou
 
 ## See also
 - [mosaic: ベクトルタイルを再構築するための Rubyコマンド（構想）](https://qiita.com/hfu/items/7025946c38f9f9b4b86e)
+
+## About social preview image
+- [Fragment of a Floor Mosaic with a Personification of Ktisis](https://www.metmuseum.org/art/collection/search/469960)
+
