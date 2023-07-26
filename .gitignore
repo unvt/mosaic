@@ -1,3 +1,4 @@
 *.geojsons
 *.fgb
 ?.rb
+__ise.rb

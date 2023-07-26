@@ -39,9 +39,10 @@ mokuroku.each do |l|
   (z, x, y) = l.split(',')[0].split('/').map{|v| v.to_i}
   next if z < options[:minimum_zoom] or z > options[:maximum_zoom]
   url = options[:template_url].sub('{z}', z.to_s).sub('{x}', x.to_s).sub('{y}', y.to_s)
+  $stderr.print url, "\n"
   Tempfile.create('mosaic') do |f|
     path = f.path
-    system "curl --silent -o #{path} #{url}"
-    system "tippecanoe-decode -c #{path} #{z} #{x} #{y} | tippecanoe-json-tool"
+    system "curl --retry 7 --silent -o #{path} #{url}"
+    system "tippecanoe-decode -f -c #{path} #{z} #{x} #{y} | tippecanoe-json-tool"
   end
 end
